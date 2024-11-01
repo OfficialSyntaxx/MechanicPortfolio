@@ -92,7 +92,7 @@ h2 {
     margin: 10px; /* Add margin for spacing */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
-    transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effects */
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Transition for hover effects */
     max-width: 300px; /* Limit width of each card */
     flex: 1; /* Allow cards to grow */
     min-width: 250px; /* Minimum width for responsiveness */
@@ -100,7 +100,8 @@ h2 {
 
 .service-card:hover {
     transform: translateY(-10px) scale(1.05); /* Lift and scale effect on hover */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
+    box-shadow: 0 0 20px #F7EA00, 0 0 30px #F7EA00; /* Glowing effect */
+    background-color: rgba(247, 234, 0, 0.1); /* Light gold background on hover */
 }
 
 h3 {
@@ -256,6 +257,10 @@ button:hover {
 
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
+    body {
+        background: linear-gradient(to bottom, #101820, #006778); /* Ensure the background is consistent */
+    }
+
     nav ul li {
         display: block; /* Stack navigation items */
         margin: 10px 0; /* Space between items */
