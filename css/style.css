@@ -253,3 +253,19 @@ button:hover {
     margin-bottom: 15px; /* Space between testimonials */
     color: #f0f0f0; /* Light text */
 }
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block; /* Stack navigation items */
+        margin: 10px 0; /* Space between items */
+    }
+
+    .service-container {
+        flex-direction: column; /* Stack service cards */
+    }
+
+    .testimonial-box {
+        padding: 10px; /* Adjust padding for mobile */
+    }
+}
