@@ -1,159 +1,239 @@
-/* General styles */
-* {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a; /* Dark background */
+    color: #f0f0f0; /* Light text */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto Mono', monospace;
+    overflow: auto; /* Allow scrolling */
 }
 
-body {
-    background-color: #1c1c1c;
-    color: #f5f5f5;
-    line-height: 1.6;
-}
-
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #2c2c2c;
+.background {
     position: fixed;
-    width: 100%;
     top: 0;
-    z-index: 1000;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 20%, rgba(0, 0, 0, 0.8) 80%);
+    z-index: -1; /* Place behind other elements */
+    animation: twinkle 1.5s infinite alternate; /* Twinkling effect */
 }
 
-.navbar .logo {
-    font-size: 24px;
-    font-weight: 700;
+@keyframes twinkle {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
+header {
+    background-color: #1a1a1a; /* Match the body background */
+    padding: 10px;
+    border-bottom: 2px solid #ff0000; /* Red border for separation */
 }
 
-.nav-links li {
-    margin-left: 20px;
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center; /* Center the navigation */
 }
 
-.nav-links a {
-    color: #f5f5f5;
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #f0f0f0;
     text-decoration: none;
-    font-size: 18px;
-}
-
-.nav-links a:hover {
-    color: #ff6f61;
     transition: color 0.3s;
 }
 
-/* Hero Section */
-.hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/mechanic-hero.jpg') no-repeat center center/cover;
-    text-align: center;
+nav ul li a:hover {
+    color: #ff0000; /* Red highlight on hover */
 }
 
-.hero h1 {
-    font-size: 64px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 24px;
-    margin-bottom: 40px;
-}
-
-.hero .btn {
-    background-color: #ff6f61;
-    color: #fff;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.hero .btn:hover {
-    background-color: #ff3f31;
-}
-
-/* About Section */
-.about-section, .services-section, .gallery-section, .contact-section {
-    padding: 100px 50px;
-    text-align: center;
+section {
+    padding: 40px 20px; /* Increased padding for better spacing */
+    text-align: center; /* Center text in sections */
 }
 
 h2 {
-    margin-bottom: 50px;
+    border-bottom: 2px solid #ff0000; /* Underline for section headings */
+    padding-bottom: 10px;
 }
 
-/* Services Section */
-.service-cards {
-    display: flex;
-    justify-content: space-around;
+.about-section {
+    animation: fadeIn 1.5s ease-out; /* Apply fade-in animation */
+}
+
+.about-box {
+    background-color: #444; /* Box background */
+    padding: 20px;
+    margin: 20px auto; /* Center the box */
+    border-radius: 5px;
+    max-width: 600px; /* Limit width */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+}
+
+.service-container {
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center the cards */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin: 20px 0; /* Add margin for spacing */
 }
 
 .service-card {
-    background-color: #333;
-    padding: 30px;
-    border-radius: 10px;
-    width: 30%;
-    transition: transform 0.3s;
+    background-color: #333; /* Darker background for the card */
+    padding: 20px;
+    margin: 10px; /* Add margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effects */
+    max-width: 300px; /* Limit width of each card */
+    flex: 1; /* Allow cards to grow */
+    min-width: 250px; /* Minimum width for responsiveness */
 }
 
 .service-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-10px) scale(1.05); /* Lift and scale effect on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
 }
 
-/* Gallery Section */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+h3 {
+    color: #ff0000; /* Red color for headings */
+    margin-bottom: 10px; /* Spacing below headings */
 }
 
-.gallery-grid img {
-    width: 100%;
-    border-radius: 10px;
+p {
+    color: #f0f0f0; /* Light text for descriptions */
 }
 
-/* Contact Section */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1a1a1a; /* Match the body background */
+    color: #f0f0f0; /* Ensure footer text is visible */
+}
+
+.button {
+    display: inline-block; /* Make the button inline-block */
+    padding: 10px 20px; /* Add padding */
+    background-color: #ff0000; /* Red background */
+    color: #f0f0f0; /* Light text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.3s; /* Transition for background and transform */
+    font-weight: bold; /* Make the text bold */
+}
+
+.button:hover {
+    background-color: #cc0000; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.gallery-container {
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center the images */
+    margin: 20px 0; /* Add margin for spacing */
+}
+
+.gallery-container img {
+    max-width: 330px; /* Set a maximum width for images */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px; /* Add some margin for spacing */
+    border-radius: 5px; /* Rounded corners for images */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition for scaling and shadow */
+}
+
+.gallery-container img:hover {
+    transform: translateY(-10px) scale(1.05); /* Lift and scale effect on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
+}
+
 form {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin: 0 auto;
+    display: flex; /* Use flexbox for form layout */
+    flex-direction: column; /* Stack inputs vertically */
+    align-items: center; /* Center align items */
+    margin: 20px auto; /* Center the form */
+    max-width: 400px; /* Limit form width */
 }
 
-form input, form textarea {
-    margin-bottom: 20px;
-    padding: 15px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    background-color: #333;
-    color: #f5f5f5;
+input, textarea {
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Add padding */
+    margin: 10px 0; /* Add margin for spacing */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 5px; /* Rounded corners */
 }
 
-form button {
-    padding: 15px;
-    background-color: #ff6f61;
-    color: #fff;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+button {
+    background-color: #ff0000; /* Red background */
+    color: #f0f0f0; /* Light text */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition for background */
 }
 
-form button:hover {
-    background-color: #ff3f31;
+button:hover {
+    background-color: #cc0000; /* Darker red on hover */
+}
+
+.logo {
+    max-width: 200px; /* Adjust the size of the logo */
+    margin-bottom: 20px; /* Space between logo and name */
+}
+
+.logo-text {
+    font-family: 'Roboto', sans-serif; /* Use the chosen font */
+    font-size: 4rem; /* Adjust font size */
+    color: #ff0000; /* Red color for the text */
+    text-align: center; /* Center the text */
+    overflow: hidden; /* Hide overflow */
+    white-space: nowrap; /* Prevent text wrapping */
+    animation: typing 2s steps(5), glitch 1s infinite; /* Typing and glitch animations */
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes glitch {
+    0%, 20%, 50%, 80%, 100% {
+        text-shadow: 1px 0 red, -1px 0 blue; /* Glitch effect */
+    }
+    40% {
+        text-shadow: -1px 0 red, 1px 0 blue; /* Glitch effect */
+    }
+    60% {
+        text-shadow: 1px 0 red, -1px 0 blue; /* Glitch effect */
+    }
+}
+
+.animated-name {
+    font-family: 'Roboto', sans-serif; /* Use the chosen font */
+    font-size: 3rem; /* Adjust font size */
+    color: #ff0000; /* Red color for the name */
+    position: relative; /* Position for glitch effect */
+    overflow: hidden; /* Hide overflow */
+}
+
+.glitch {
+    position: relative;
+    color: #ff0000; /* Red color */
+    animation: glitch 1s infinite; /* Glitch animation */
+}
+
+#particleCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place behind other elements */
 }

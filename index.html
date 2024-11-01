@@ -3,78 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Mechanic Portfolio</title>
+    <title>Mechanic Mike Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet"> <!-- Add your chosen font -->
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="logo">MechanicPro</div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Welcome to MechanicPro</h1>
+    <canvas id="particleCanvas"></canvas> <!-- Particle background -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="hero">
+        <h1 class="logo-text" id="name"></h1> <!-- Text logo -->
         <p>Precision. Passion. Performance.</p>
-        <a href="#services" class="btn">Explore Our Services</a>
+        <a href="#services" class="button">Explore Our Services</a>
     </section>
-
-    <!-- About Section -->
     <section id="about" class="about-section">
         <h2>About Us</h2>
-        <p>With years of experience in automotive repair and customization, we bring futuristic solutions to everyday challenges. Our team focuses on delivering exceptional craftsmanship and innovative approaches to mechanics.</p>
+        <div class="about-box">
+            <p>With over 10 years of experience in the automotive industry, we specialize in providing high-quality repairs and maintenance for all types of vehicles. Our passion for cars drives us to stay updated with the latest technologies and techniques.</p>
+        </div>
     </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services-section">
+    <section id="services">
         <h2>Our Services</h2>
-        <div class="service-cards">
+        <div class="service-container">
             <div class="service-card">
                 <h3>Engine Repair</h3>
-                <p>We provide expert engine diagnostics and repairs to keep your vehicle in top shape.</p>
+                <p>Expert diagnostics and repairs for all engine types.</p>
             </div>
             <div class="service-card">
                 <h3>Custom Builds</h3>
-                <p>Our team offers custom builds for performance enthusiasts, tailored to your needs.</p>
+                <p>Tailored automotive solutions to meet your needs.</p>
             </div>
             <div class="service-card">
                 <h3>Diagnostics</h3>
-                <p>Using state-of-the-art tools, we deliver precise diagnostics for any automotive issues.</p>
+                <p>Advanced diagnostics to keep your vehicle running smoothly.</p>
             </div>
         </div>
     </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery-section">
-        <h2>Our Work</h2>
-        <div class="gallery-grid">
-            <!-- Images will be placed here -->
-            <img src="images/car1.jpg" alt="Car 1">
-            <img src="images/car2.jpg" alt="Car 2">
-            <img src="images/car3.jpg" alt="Car 3">
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <img src="https://images.unsplash.com/photo-1717068341695-9d33ffb66968?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mechanic Work 1">
+            <img src="https://images.pexels.com/photos/159293/car-engine-motor-clean-customized-159293.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Mechanic Work 2">
+            <img src="https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Mechanic Work 3">
         </div>
     </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
+    <section id="contact">
         <h2>Contact Us</h2>
-        <p>Have questions? Get in touch with us today for more information on our services.</p>
         <form>
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
             <textarea placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
+            <button type="submit">Send</button>
         </form>
     </section>
-
+    <footer>
+        <p>&copy; 2024 Mechanic Mike. All rights reserved.</p>
+    </footer>
     <script src="js/script.js"></script>
+    <script src="js/typing.js"></script> <!-- Include the typing effect script -->
+    <script src="js/particles.js"></script> <!-- Include the particle animation script -->
 </body>
 </html>
