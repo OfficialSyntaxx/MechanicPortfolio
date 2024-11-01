@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mechanic Mike Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet"> <!-- Add your chosen font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <canvas id="particleCanvas"></canvas> <!-- Particle background -->
+    <canvas id="particleCanvas"></canvas>
     <header>
         <nav>
             <ul>
@@ -21,7 +21,7 @@
         </nav>
     </header>
     <section id="hero">
-        <h1 class="logo-text" id="name"></h1> <!-- Text logo -->
+        <h1 class="logo-text" id="name"></h1>
         <p>Precision. Passion. Performance.</p>
         <a href="#services" class="button">Explore Our Services</a>
     </section>
@@ -35,15 +35,15 @@
         <h2>Our Services</h2>
         <div class="service-container">
             <div class="service-card">
-                <h3>Engine Repair</h3>
+                <h3 style="color: #F7EA00;">Engine Repair</h3>
                 <p>Expert diagnostics and repairs for all engine types.</p>
             </div>
             <div class="service-card">
-                <h3>Custom Builds</h3>
+                <h3 style="color: #F7EA00;">Custom Builds</h3>
                 <p>Tailored automotive solutions to meet your needs.</p>
             </div>
             <div class="service-card">
-                <h3>Diagnostics</h3>
+                <h3 style="color: #F7EA00;">Diagnostics</h3>
                 <p>Advanced diagnostics to keep your vehicle running smoothly.</p>
             </div>
         </div>
@@ -62,14 +62,35 @@
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
             <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
+            <button type="submit" style="background-color: #F7EA00; color: #101820;">Send</button>
         </form>
+    </section>
+    <section id="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-box">
+            <div class="testimonial">
+                <p>"Great service! My car has never run better!"</p>
+                <p><strong>John D.</strong> - ★★★★★ (March 2024)</p>
+            </div>
+            <div class="testimonial">
+                <p>"Highly recommend! Professional and reliable."</p>
+                <p><strong>Sarah K.</strong> - ★★★★☆ (February 2024)</p>
+            </div>
+            <div class="testimonial">
+                <p>"Fast and efficient service. Will come back again!"</p>
+                <p><strong>Mike T.</strong> - ★★★★★ (January 2024)</p>
+            </div>
+            <div class="testimonial">
+                <p>"They fixed my car in no time. Very satisfied!"</p>
+                <p><strong>Emily R.</strong> - ★★★★☆ (December 2023)</p>
+            </div>
+        </div>
     </section>
     <footer>
         <p>&copy; 2024 Mechanic Mike. All rights reserved.</p>
     </footer>
     <script src="js/script.js"></script>
-    <script src="js/typing.js"></script> <!-- Include the typing effect script -->
-    <script src="js/particles.js"></script> <!-- Include the particle animation script -->
+    <script src="js/typing.js"></script>
+    <script src="js/particles.js"></script>
 </body>
 </html>

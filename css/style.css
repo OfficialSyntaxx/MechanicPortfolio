@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap'); /* Import the font */
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #1a1a1a; /* Dark background */
-    color: #f0f0f0; /* Light text */
+    background: linear-gradient(to bottom, #101820, #006778); /* Gradient background */
+    color: #ffffff; /* White text */
     margin: 0;
     padding: 0;
     overflow: auto; /* Allow scrolling */
@@ -30,7 +32,7 @@ body {
 header {
     background-color: #1a1a1a; /* Match the body background */
     padding: 10px;
-    border-bottom: 2px solid #ff0000; /* Red border for separation */
+    border-bottom: 2px solid #F7EA00; /* Gold border for separation */
 }
 
 nav ul {
@@ -51,7 +53,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ff0000; /* Red highlight on hover */
+    color: #F7EA00; /* Gold highlight on hover */
 }
 
 section {
@@ -60,7 +62,7 @@ section {
 }
 
 h2 {
-    border-bottom: 2px solid #ff0000; /* Underline for section headings */
+    border-bottom: 2px solid #006778; /* Teal for headings */
     padding-bottom: 10px;
 }
 
@@ -102,7 +104,7 @@ h2 {
 }
 
 h3 {
-    color: #ff0000; /* Red color for headings */
+    color: #F7EA00; /* Gold color for headings */
     margin-bottom: 10px; /* Spacing below headings */
 }
 
@@ -120,8 +122,8 @@ footer {
 .button {
     display: inline-block; /* Make the button inline-block */
     padding: 10px 20px; /* Add padding */
-    background-color: #ff0000; /* Red background */
-    color: #f0f0f0; /* Light text */
+    background-color: #006778; /* Teal button */
+    color: #ffffff; /* White text */
     text-decoration: none; /* Remove underline */
     border-radius: 5px; /* Rounded corners */
     transition: background-color 0.3s, transform 0.3s; /* Transition for background and transform */
@@ -129,7 +131,7 @@ footer {
 }
 
 .button:hover {
-    background-color: #cc0000; /* Darker red on hover */
+    background-color: #F7EA00; /* Gold on hover */
     transform: scale(1.05); /* Slightly scale up on hover */
 }
 
@@ -170,8 +172,8 @@ input, textarea {
 }
 
 button {
-    background-color: #ff0000; /* Red background */
-    color: #f0f0f0; /* Light text */
+    background-color: #F7EA00; /* Gold background */
+    color: #101820; /* Dark text */
     border: none; /* Remove border */
     padding: 10px 20px; /* Add padding */
     border-radius: 5px; /* Rounded corners */
@@ -191,7 +193,7 @@ button:hover {
 .logo-text {
     font-family: 'Roboto', sans-serif; /* Use the chosen font */
     font-size: 4rem; /* Adjust font size */
-    color: #ff0000; /* Red color for the text */
+    color: #006778; /* Teal color for the text */
     text-align: center; /* Center the text */
     overflow: hidden; /* Hide overflow */
     white-space: nowrap; /* Prevent text wrapping */
@@ -205,13 +207,13 @@ button:hover {
 
 @keyframes glitch {
     0%, 20%, 50%, 80%, 100% {
-        text-shadow: 1px 0 red, -1px 0 blue; /* Glitch effect */
+        text-shadow: 1px 0 #F7EA00, -1px 0 #006778; /* Glitch effect */
     }
     40% {
-        text-shadow: -1px 0 red, 1px 0 blue; /* Glitch effect */
+        text-shadow: -1px 0 #F7EA00, 1px 0 #006778; /* Glitch effect */
     }
     60% {
-        text-shadow: 1px 0 red, -1px 0 blue; /* Glitch effect */
+        text-shadow: 1px 0 #F7EA00, -1px 0 #006778; /* Glitch effect */
     }
 }
 
@@ -236,4 +238,18 @@ button:hover {
     width: 100%;
     height: 100%;
     z-index: -1; /* Place behind other elements */
+}
+
+.testimonial-box {
+    background-color: #444; /* Dark background for testimonials */
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 20px auto; /* Center the box */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.testimonial {
+    margin-bottom: 15px; /* Space between testimonials */
+    color: #f0f0f0; /* Light text */
 }
